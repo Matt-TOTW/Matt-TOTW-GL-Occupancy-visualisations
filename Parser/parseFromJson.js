@@ -58,10 +58,7 @@ module.exports = (inputFilepath, outputFilepath) => {
       if (arr.length > maxTotal) maxTotal = arr.length;
       Object.keys(sites).forEach((site) => {
         const count = arr.filter((roomPick) => roomPick.Site === site).length;
-        if (count > sites[site].allRatePlans.max) {
-          sites[site].allRatePlans.max = count;
-          if (site === 'POAKENS') console.log('THE DAY', theDay);
-        }
+        if (count > sites[site].allRatePlans.max) sites[site].allRatePlans.max = count;
       });
       Object.keys(ratePlans).forEach((ratePlan) => {
         const count = arr.filter((roomPick) =>
