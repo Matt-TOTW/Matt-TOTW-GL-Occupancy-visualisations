@@ -142,7 +142,7 @@ const PickUp: React.FC<PickupProps & TooltipProps<number, string>> = (props) => 
           while (i < pickupData.length) {
             processedPickupData.push({
               day: j,
-              occ: pickupData[i].occ,
+              occ: pickupData[i]?.occ,
             });
             i++;
             j++;
